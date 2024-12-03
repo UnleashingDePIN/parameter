@@ -76,12 +76,12 @@ export default function ParameterResearch() {
           <p className="text-xl mb-4 text-center">We build tools, create content, and conduct deep-dive analysis to advance the adoption and understanding of blockchain technology in real-world applications.</p>
         </section>
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-8 text-white">Projects</h2>
+          <h2 className="text-2xl font-semibold mb-8 text-white font-inter text-center">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[80%] mx-auto">
             {projects.map((project, index) => (
               <div key={index} className="bg-gray-900 p-6 rounded-lg transition-transform hover:scale-105 flex flex-col justify-between h-[200px] w-full">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white font-mono">{project.title}</h3>
                   <p className="mb-2">{project.description}</p>
                 </div>
                 <div className="flex gap-4">
@@ -96,13 +96,13 @@ export default function ParameterResearch() {
           </div>
         </section>
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-8 text-white">Team</h2>
+          <h2 className="text-2xl font-semibold mb-8 text-white font-inter text-center">Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[80%] mx-auto">
             {team.map((member, index) => (
               <div key={index} className="bg-gray-900 p-6 rounded-lg flex items-center space-x-4">
                 <Image src={member.avatar} alt={member.name} width={80} height={80} className="rounded-full"/>
                 <div>
-                  <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+                  <h3 className="text-xl font-semibold text-white font-mono">{member.name}</h3>
                   <p className="text-gray-400">{member.role}</p>
                   <div className="flex gap-4 mt-2">
                     {member.links.map((link, i) => (
@@ -122,6 +122,7 @@ export default function ParameterResearch() {
             ))}
           </div>
         </section>
+        <h2 className="text-2xl font-semibold mb-8 text-white font-inter text-center">Articles</h2>
         <div id="substack-feed-embed" className="max-w-[80%] mx-auto mb-16"></div>
         <Script id="substack-feed-widget-config">
           {`
@@ -144,7 +145,7 @@ export default function ParameterResearch() {
         <iframe src="https://parameterresearch.substack.com/embed" width="970" height="300" className="rounded-lg" frameBorder="0" scrolling="no"></iframe>
       </div>
       <footer className="pb-6 px-4 sm:px-6 lg:px-8 text-center text-gray-500">
-        <p>&copy; 2024 Parameter Research. All rights reserved.</p>
+        <p className="font-mono">© {new Date().getFullYear()} Parameter Research. All rights reserved.</p>
       </footer>
     </div>
   )
